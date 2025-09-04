@@ -1,0 +1,8 @@
+
+all: src/
+	cd src/ && $(MAKE)
+
+clean: src/
+	cd src/ && $(MAKE) clean
+
+

@@ -1,0 +1,28 @@
+#
+# Makefile for slbinst
+#
+
+
+CC = @CC@
+CFLAGS = -Wall -Wextra -std=c99 @CURL_CFLAGS@
+DEFS = @DEFS@
+LIBS = @LIBS@ @CURL_LIBS@
+
+SRCS = $(wildcard *.c)
+OBJS = $(SRCS:.c=.o)
+PROG = slbinst
+
+all: $(PROG)
+
+$(PROG): $(OBJS)
+	$(CC) $(CFLAGS) -o $@ $(OBJS) $(LIBS)
+
+.c.o:
+	$(CC) $(DEFS) -c -o $@ $<
+
+clean:
+	rm -f $(OBJS)
+	rm $(PROG)
+
+
+
