@@ -9,6 +9,7 @@
 *.dll
 *.exe
 *.out
+slbinst
 
 /bin
 /build
@@ -20,3 +21,6 @@ config.log
 config.status
 src/Makefile
 
+
+.*.swp
+*.swp
