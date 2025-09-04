@@ -22,7 +22,7 @@ $(PROG): $(OBJS)
 
 clean:
 	rm -f $(OBJS)
-	rm $(PROG)
+	rm -f $(PROG)
 
 
 
