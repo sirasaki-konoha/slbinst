@@ -2,6 +2,11 @@
 all: src/
 	cd src/ && $(MAKE)
 
+install: src/
+	@echo "INSTALL ./src/slbinst"
+	install -Dm755 ./src/slbinst /usr/local/bin/
+	@echo "INSTALL ./src/slbinst"
+
 clean: src/
 	cd src/ && $(MAKE) clean
 

@@ -20,6 +20,8 @@ $(PROG): $(OBJS)
 .c.o:
 	$(CC) $(DEFS) -c -o $@ $<
 
+c: clean
+
 clean:
 	rm -f $(OBJS)
 	rm -f $(PROG)

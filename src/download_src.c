@@ -4,8 +4,8 @@
 
 
 int progress_callback(void *p, curl_off_t dltotal, curl_off_t dlnow, curl_off_t ultotal, curl_off_t ulnow) {
-	(void)p; (void)ulnow;
-	(void)ultotal;
+	(void)p; (void)ulnow; (void)ultotal;
+
 	if(dltotal > 0) {
 		int percent = (int)((dlnow * 100) / dltotal);
 		printf("\rDownloading: %d%%", percent);

@@ -9,13 +9,13 @@ AC_PROG_CC
 AC_PROG_CC_C99
 
 # Check compiler supporting Wall 
-AC_MSG_CHECKING([wheather -Wall works])
+AC_MSG_CHECKING([whether -Wall works])
 AC_COMPILE_IFELSE(
 		  [AC_LANG_PROGRAM([], [])],
 		  [CFLAGS="$CFLAGS -Wall"; AC_MSG_RESULT([yes])],
 		  [AC_MSG_RESULT([no])]
 )
-AC_MSG_CHECKING([wheather -Wextra works])
+AC_MSG_CHECKING([whether -Wextra works])
 AC_COMPILE_IFELSE(
 		  [AC_LANG_PROGRAM([], [])],
 		  [CFLAGS="$CFLAGS -Wextra"; AC_MSG_RESULT([yes])],
